@@ -7305,6 +7305,10 @@ button.close {
   width: calc(12.5% - 5px);
 }
 
+.pswp__caption__center {
+  text-align: center;
+}
+
 /*# sourceMappingURL=app.css.map */
 
 /*# sourceMappingURL=app.css.map */
