@@ -7334,22 +7334,22 @@ button.close {
     display: none !important;
   }
 }
-.ps-slides {
+.ps-thumbs {
   display: block;
 }
-.ps-slides.horizontal > li {
+.ps-thumbs.horizontal > li {
   float: left;
   margin-right: 5px;
   list-style: none;
   display: block;
 }
-.ps-slides.horizontal > li:last-child {
+.ps-thumbs.horizontal > li:last-child {
   margin-right: 0px;
 }
-.ps-slides.horizontal > li:hover, .ps-slides.horizontal > li:focus {
+.ps-thumbs.horizontal > li:hover, .ps-thumbs.horizontal > li:focus {
   cursor: pointer;
 }
-.ps-slides.horizontal.wraps > li {
+.ps-thumbs.horizontal.wraps > li {
   width: calc(12.5% - 5px);
 }
 
