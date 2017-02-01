@@ -1,0 +1,29 @@
+@import "../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+.ps-slides {
+    display: block;
+    &.horizontal {
+        > li {
+            float: left;
+            margin-right: 5px;
+            list-style: none;
+            display: block;
+            &:last-child {
+                margin-right: 0px;
+            }
+            &:hover,
+            &:focus {
+                cursor: pointer;
+            }
+        }
+        &.wraps {
+            > li {
+                width: calc(12.5% - 5px);
+            }
+        }
+    }
+}
+
+.pswp__caption__center {
+    text-align: center;
+}
