@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="demo">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PhotoSwipe Demo</title>
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="stylesheets/app.css">
+    <link rel="stylesheet" href="../node_modules/photoswipe/dist/photoswipe.css">
+    <link rel="stylesheet" href="../node_modules/photoswipe/dist/default-skin/default-skin.css">
+    <!-- Scripts -->
+    <script type="text/javascript" src="../node_modules/angular/angular.min.js"></script>
+    <script type="text/javascript" src="../node_modules/photoswipe/dist/photoswipe.js"></script>
+    <script type="text/javascript" src="../node_modules/photoswipe/dist/photoswipe-ui-default.min.js"></script>
+    <script src="javascript/angular-photoswipe.js"></script>
+    <script src="javascript/app.js"></script>
+</head>
+
+<body class="container-fluid" ng-controller="PhotoSwipeCtrl">
+    <header>
+        <h1>{{title}}</h1>
+    </header>
+    <section>
+        <p><button class="btn btn-default" ng-click="showGallery()"> Show Gallery (external btn) </button></p>
+        <ul class="ps-slides horizontal wraps">
+            <li ng-repeat="slide in slides track by $index" ng-click="showGallery($index)">
+                <img ng-src="{{slide.thumbUrl}}" alt="{{$index}}" class="img-responsive"/>
+            </li>
+        </ul>
+        <div ng-photoswipe slides="slides" open="open" slide-selector=".ps-slides > li > img" on-close="closeGallery()" options="opts" template="ui/templates/ng-photoswipe.html"></div>
+    </section>
+</body>
+
+</html>
