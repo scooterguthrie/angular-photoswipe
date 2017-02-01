@@ -28,12 +28,12 @@
     </header>
     <section>
         <p><button class="btn btn-default" ng-click="showGallery()"> Show Gallery (external btn) </button></p>
-        <ul class="ps-slides horizontal wraps">
+        <ul class="ps-thumbs horizontal wraps">
             <li ng-repeat="slide in slides track by $index" ng-click="showGallery($index)">
                 <img ng-src="{{slide.thumbUrl}}" alt="{{$index}}" class="img-responsive"/>
             </li>
         </ul>
-        <div ng-photoswipe slides="slides" open="open" slide-selector=".ps-slides > li > img" on-close="closeGallery()" options="opts" template="ui/templates/ng-photoswipe.html"></div>
+        <div ng-photoswipe slides="slides" open="open" slide-selector=".ps-thumbs > li > img" on-close="closeGallery()" options="opts" template="ui/templates/ng-photoswipe.html"></div>
     </section>
 </body>
 
